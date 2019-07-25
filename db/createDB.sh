@@ -8,7 +8,7 @@ DBPASS="Badminton"
 #	create the database & the database user
 #
 mysql --host=localhost --user=root <<EOF
-CREATE DATABASE IF NOT EXISTS $DBNAME;
+CREATE DATABASE IF NOT EXISTS $DBNAME CHARACTER SET utf8 COLLATE utf8_general_ci;
 USE mysql;
 DELETE FROM user WHERE User="$DBUSER";
 FLUSH PRIVILEGES;
@@ -110,3 +110,8 @@ for SQL in init/*.sql; do
 		mysql --host=localhost --user=$DBUSER --password=$DBPASS --database=$DBNAME <$SQL
 	fi
 done
+
+#
+#	generate the nicknames
+#
+../cli/generate-nicks.php
