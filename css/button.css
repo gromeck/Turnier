@@ -1,0 +1,82 @@
+.button {
+	border:1px solid #c0c0c0;
+	background:#d0d0d0;
+	padding:0.25em;
+	padding-left:0.5em;
+	padding-right:0.5em;
+	margin:0.2em;
+	-moz-border-radius:0.25em;
+	border-radius:0.5em;
+	box-shadow: rgba(0,0,0,0.2) 0.1em 0.1em 0.1em, inset rgba(255,255,255,0.7) 0 0 0.5em;
+	color:#808080;
+	font-weight:bold;
+	cursor:pointer;
+	display:inline-block;
+}
+
+.button[accessKey='a'], .button[accessKey='b'], .button[accessKey='c'], .button[accessKey='d'], .button[accessKey='e'] {
+	background-repeat:no-repeat;
+	background-position:left center;
+	background-size:1.5em 1.5em;
+	padding-left:2em;
+}
+
+.button[accessKey='a'] {
+	background-image:url('../images/bullet-button-red.png');
+}
+
+.button[accessKey='b'] {
+	background-image:url('../images/bullet-button-green.png');
+}
+
+.button[accessKey='c'] {
+	background-image:url('../images/bullet-button-yellow.png');
+}
+
+.button[accessKey='d'] {
+	background-image:url('../images/bullet-button-blue.png');
+}
+
+.button[accessKey='e'] {
+	background-image:url('../images/bullet-button-white.png');
+}
+
+
+.button_tiny {
+	border:1px solid #c0c0c0;
+	background:#d0d0d0;
+	padding:0.1em;
+	margin:0.1em;
+	-moz-border-radius:0.1em;
+	border-radius:0.5em;
+	box-shadow: rgba(0,0,0,0.2) 0.1em 0.1em 0.1em, inset rgba(255,255,255,0.7) 0 0 0.5em;
+	color:#808080;
+	font-size:0.5em;
+	font-weight:bold;
+	cursor:pointer;
+	display:inline-block;
+}
+
+#button_playerunban {
+	background: rgb(208, 255, 208) none repeat scroll 0% 0%;
+}
+
+#button_playerban {
+	background: rgb(255, 208, 208) none repeat scroll 0% 0%;
+}
+#button_playerdelete, #button_clearall, #button_unlinkRFIDcode {
+	color:#202020;
+	background: rgb(255, 100, 100) none repeat scroll 0% 0%;
+}
+#button_rfidlink {
+	color:#202020;
+	background: rgb(200,255,200) none repeat scroll 0% 0%;
+}
+#button_rfidunlink {
+	color:#202020;
+	background: rgb(255,200,200) none repeat scroll 0% 0%;
+}
+#button_audiotest_start, #button_audiotest_stop, #button_audiotest_playlist {
+	width:15em;
+}
+

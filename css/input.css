@@ -1,0 +1,51 @@
+input {
+	font-size:1em;
+	cursor:pointer;
+	border:1px solid #c0c0c0;
+	background:#d0d0d0;
+	padding:0.25em;
+	padding-left:0.5em;
+	padding-right:0.5em;
+	margin:0.25em;
+	-moz-border-radius:0.25em;
+	border-radius:0.5em;
+	box-shadow: rgba(0,0,0,0.2) 0.1em 0.1em 0.1em, inset rgba(255,255,255,0.7) 0 0 0.5em;
+	color:#606060;
+}
+
+#filter {
+	width:20em;
+}
+
+span.deleteicon {
+	position: relative;
+}
+span.deleteicon span {
+	position: absolute;
+	display: block;
+	top:0;
+	right: 1em;
+	width: 32px;
+	height: 32px;
+	background: url('/images/dialog-close-2.png');
+	cursor: pointer;
+}
+span.deleteicon input {
+	padding-right: 16px;
+	box-sizing: border-box;
+}
+
+select {
+	font-size:1em;
+	cursor:pointer;
+	border:1px solid #c0c0c0;
+	background:#d0d0d0;
+	padding:0.25em;
+	padding-left:0.5em;
+	padding-right:0.5em;
+	margin:0.25em;
+	-moz-border-radius:0.25em;
+	border-radius:0.5em;
+	box-shadow: rgba(0,0,0,0.2) 0.1em 0.1em 0.1em, inset rgba(255,255,255,0.7) 0 0 0.5em;
+	color:#606060;
+}

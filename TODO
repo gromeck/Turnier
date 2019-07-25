@@ -1,0 +1,33 @@
+TODO
+----
+
+- Benutzerrollen (Admin, Armbandausgabe, Gast)
+
+- Spielrunde: Schrift vergrößern
+  Evtl. eine Condensed-Schrift verwenden und die Tabellen
+  über die komplette Breite des Bildschirms ziehen
+
+- Vor der Spielrunde sollte neben den letzten Check-In/-Out
+  Aktivitäten auch die aktuelle Anzahl von aktiven Spielern
+  angezeigt werden
+
+- RFID-Code-Mgmt
+  Seite zur Pflege der RFID-Codes zur Kontrolle der
+  Zurückgegebenen Armbänder und zum Ersetzen einzelner
+  defekter RFID-Codes/Armbänder
+
+- Im Hintergrund sollte der Status der Runden aktualisert
+  werden (Rundenanzeige) und bei laufenden Runden sollte
+  die Uhr eingeblendet werden (egal welche Seite gerade
+  auf dem Bildschirm ist).
+  Damit kann auf den Terminals für Check-In, Registrierung
+  oder Statistik die Runden-Restzeit verfolgt werden.
+
+- Wenn ein Terminal nicht im ADMIN-Modus und nicht auf der
+  Check-In-Seite ist, so sollte nach spätestens 5 Minuten
+  seit dem Laden (bzw. der letzten Eingabe), die Statistik-
+  Seite angezeigt werden.
+
+- Header aller Scripte auf sinnvolen Inhalt setzen
+
+- MPC Stick als EXT4 formatieren
