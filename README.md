@@ -1,3 +1,5 @@
+![GitHub Logo](/images/shuttlecock.png)
+
 # Turnier
 Eine Web-Applikation für (Badminton-)Turniere.
 
