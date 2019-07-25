@@ -3,7 +3,7 @@
 # Turnier
 Eine Web-Applikation für (Badminton-)Turniere.
 
-Die Applikation ist aktuell auf Jux-Turniere ausgelegt, d.h. es werden keine klassischen Ausscheidungsrunden gespielt, sondern jeder Spieler kann beliebig lange im Turnier bleiben.
+Die Applikation ist auf Jux-Turniere ausgelegt, d.h. es werden keine klassischen Ausscheidungsrunden gespielt, sondern jeder Spieler kann beliebig lange im Turnier bleiben.
 
 Es wird Wert darauf gelegt, dass
 * ausschließlich Doppel- bzw. Mixed-Paarungen gespielt werden,
@@ -21,7 +21,6 @@ Es hat sich in der Vergangenheit gezeigt, dass das Scannen der Armbänder mit Ba
 RFID-Chips funktionieren kontaktlos über mehrere Zentimeter und werden zuverlässiger ausgelesen als Barcodes. An dem Registrier-Terminal kann der Spieler sein Schweißband mit seinen Daten zunächst einmalig koppeln. Der Check-In erfolgt dann wie gewohnt über dieses RFID-Armband.
 
 # Voraussetzungen
-
 * Apache Web Server
 * MySQL bzw. MariaDB
 * PHP 5 oder größer
