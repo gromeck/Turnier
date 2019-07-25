@@ -7,12 +7,22 @@
 **
 **	Christian Lorenz
 */
+
+/*
+**	store the execution time
+*/
+$_execution_time = microtime(true);
+
+/*
+**	do the includes
+*/
 include_once 'inc/settings.inc.php';
 include_once 'inc/common.inc.php';
 include_once 'inc/html.inc.php';
 include_once 'inc/util.inc.php';
 include_once 'inc/round.inc.php';
 include_once 'inc/database.inc.php';
+
 
 /*
 **	the available pages
@@ -57,4 +67,5 @@ $content = ob_get_clean();
 
 html_header($pageid,$_page_title,$_page_headline);
 print $content;
+$_execution_time = round((microtime(true) - $_execution_time) * 1000,3);
 html_footer();

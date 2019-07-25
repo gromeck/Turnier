@@ -293,16 +293,15 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f6e6b4', end
 	background:#2d882d;
 }
 
-.dimm {
-	position:absolute;
+.executiontime {
 	top:0;
 	left:0;
-	width:100%;
-	height:100%;
-	background-color:#000000;
-	opacity:0.8;
+	height:1em;
+	background-color:#ffffff;
+	color:#000000;
+	opacity:0.5;
 	z-index:5;
-	visibility:hidden;
+	font-size:0.5em;
 }
 
 .dbupdate {

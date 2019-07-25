@@ -117,10 +117,14 @@ function getKeyCode(event)
 
 function html_footer()
 {
+	global $_execution_time;
 	?>
 </div>
-<div class="dimm" id="dimm">
-</div>
+<?php if (defined('__SHOW_EXECUTIONTIME__') && __SHOW_EXECUTIONTIME__) { ?>
+	<div class="executiontime" id="executiontime">
+	Execution Time: <?php print $_execution_time ?>ms
+	</div>
+<?php } ?>
 </body>
 </html>
 	<?php

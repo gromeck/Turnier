@@ -30,6 +30,8 @@ define('ROUND_MODE_MIXED',1);
 define('ROUND_MODE_DOUBLE',2);
 define('ROUND_MODE_NORMAL',3);
 
+date_default_timezone_set('Europe/Berlin');
+
 /*
 **	start a session if not in CLI mode
 */
