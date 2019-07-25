@@ -64,7 +64,7 @@
 #button_playerban {
 	background: rgb(255, 208, 208) none repeat scroll 0% 0%;
 }
-#button_playerdelete, #button_clearall, #button_unlinkRFIDcode {
+#button_playerdelete, #button_clearall, #button_unlinkRFIDcode, #button_simulate {
 	color:#202020;
 	background: rgb(255, 100, 100) none repeat scroll 0% 0%;
 }

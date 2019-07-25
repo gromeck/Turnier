@@ -121,3 +121,31 @@ function round_compute($nround)
 
 	return $round;
 }
+
+/*
+**	simulate the given number of rounds
+*/
+function round_simulate($nrounds)
+{
+	for ($n = 0;$n < $nrounds;$n++) {
+		/*
+		**	start a new round
+		*/
+		$nround = db_round_start();
+		//print "Round $nround: started ...\n";
+		db_round_store($nround,round_compute($nround));
+
+		/*
+		**	play the round
+		*/
+		$nround = db_round_play($nround);
+		//print "Round $nround: now playing ...\n";
+		$round = db_round_restore($nround);
+
+		/*
+		**	stop the round
+		*/
+		$nround = db_round_stop($nround);
+		//print "Round $nround: stopped.\n";
+	}
+}

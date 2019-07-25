@@ -39,6 +39,7 @@ $settings = array(
 	array( 'Name' => 'MPC_VOLUME_EFFECT',  'Title' => 'MusicPlayer Pegel für Effekte',    'Value' => '50',  'Units' => '%' ),
 	array( 'Name' => 'MPC_VOLUME_MUSIC',   'Title' => 'MusicPlayer Pegel für Musik',      'Value' => '30',  'Units' => '%' ),
 	array( 'Name' => 'SHOW_EXECUTIONTIME', 'Title' => 'Ausführungszeit anzeigen',         'Value' => '0',  'Units' => '' ),
+	array( 'Name' => 'SIMULATION_ROUNDS',  'Title' => 'Anzahl Simulationsrunden',         'Value' => '10', 'Units' => 'Runden' ),
 );
 
 /*

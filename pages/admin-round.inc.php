@@ -38,6 +38,11 @@ if (@$_GET) {
 		html_separator();
 		db_round_rebuild_all();
 	}
+	if (@$_GET['simulate']) {
+		html_print_info('Es wurden '.__SIMULATION_ROUNDS__.' Runden simuliert!');
+		html_separator();
+		round_simulate(__SIMULATION_ROUNDS__);
+	}
 }
 ?>
 <script language="JavaScript">
@@ -54,6 +59,11 @@ function clickedClearAll()
 function clickedRebuild()
 {
 	document.location = '?page=admin-round&rebuild=all';
+}
+function clickedSimulate()
+{
+	if (confirm('Soll die Simulation wirklich ausgeführt werden?')) 
+		document.location = '?page=admin-round&simulate=1';
 }
 </script>
 <?php
@@ -97,6 +107,7 @@ function print_list($rounds)
 	*/
 	html_button('clearall','Alle Runden löschen','clickedClearAll();');
 	html_button('rebuild','Match &amp; Pairing Counter neu berechnen','clickedRebuild();');
+	html_button('simulate','Simulation von '.__SIMULATION_ROUNDS__.' Runden ausführen','clickedSimulate();');
 	html_separator();
 
 	/*
