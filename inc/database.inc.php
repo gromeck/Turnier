@@ -42,6 +42,7 @@ function db_query($query)
 		//print('db_query: mysqli() failed');
 		return false;
 	}
+	$mysqli->set_charset('utf8');
 
 //	print "query: $query\n";
 	if (!($result = $mysqli->query($query))) {
