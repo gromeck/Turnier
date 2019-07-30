@@ -1,8 +1,6 @@
 #!/bin/bash
 
-DBNAME="Badminton"
-DBUSER="Badminton"
-DBPASS="Badminton"
+. ./credentials.sh
 
 PLAYERS="
 Luke,Skywalker,M,2
@@ -41,7 +39,7 @@ for PLAYER in $PLAYERS; do
 
 	#echo "inserting [$ROW]: $FIRSTNAME,$LASTNAME,$CLASS,$ACTIVE"
 
-	mysql --host=localhost --user=$DBUSER --password=$DBPASS --database=$DBNAME <<EOF
+	mysql --host=$DBHOST --user=$DBUSER --password=$DBPASS --database=$DBNAME <<EOF
 		INSERT INTO Players (Firstname,Lastname,Gender,Class,Active) VALUES ("$FIRSTNAME","$LASTNAME","$GENDER","$CLASS",$ACTIVE)
 EOF
 	cat <<EOF

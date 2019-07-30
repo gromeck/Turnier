@@ -1,13 +1,11 @@
 #!/bin/bash
 
-DBNAME="Badminton"
-DBUSER="Badminton"
-DBPASS="Badminton"
+. ./credentials.sh
 
 #
 #	create the database & the database user
 #
-mysql --host=localhost --user=root <<EOF
+mysql --host=$DBHOST --user=root <<EOF
 DROP DATABASE $DBNAME;
 EXIT
 EOF
