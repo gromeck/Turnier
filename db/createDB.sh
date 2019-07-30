@@ -5,7 +5,7 @@
 #
 #	create the database & the database user
 #
-mysql --host=$DB_HOSTNAME --port=$DB_HOSTPORT --user=root <<EOF
+mysql --protocol=tcp --host=$DB_HOSTNAME --port=$DB_HOSTPORT --user=root <<EOF
 CREATE DATABASE IF NOT EXISTS $DB_DATABASE CHARACTER SET utf8 COLLATE utf8_general_ci;
 USE mysql;
 DELETE FROM user WHERE User="$DB_USERNAME";
@@ -18,7 +18,7 @@ EOF
 #
 #	create the tables
 #
-mysql --host=$DB_HOSTNAME --port=$DB_HOSTPORT --user=$DB_USERNAME --password=$DB_PASSWORD --database=$DB_DATABASE <<EOF
+$MYSQL <<EOF
 CREATE TABLE IF NOT EXISTS Settings (
 	Name varchar(100) NOT NULL default "",
 	Value varchar(1000) NOT NULL default "",
@@ -105,7 +105,7 @@ EOF
 for SQL in init/*.sql; do
 	if [ -f $SQL ]; then
 		echo "Processing initial sql script: $SQL"
-		mysql --host=$DB_HOSTNAME --port=$DB_HOSTPORT --user=$DB_USERNAME --password=$DB_PASSWORD --database=$DB_DATABASE <$SQL
+		$MYSQL <$SQL
 	fi
 done
 
