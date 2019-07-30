@@ -39,7 +39,7 @@ for PLAYER in $PLAYERS; do
 
 	#echo "inserting [$ROW]: $FIRSTNAME,$LASTNAME,$CLASS,$ACTIVE"
 
-	mysql --host=$DB_HOSTNAME --user=$DB_USERNAME --password=$DB_PASSWORD --database=$DB_DATABASE <<EOF
+	mysql --host=$DB_HOSTNAME --port=$DB_HOSTPORT --user=$DB_USERNAME --password=$DB_PASSWORD --database=$DB_DATABASE <<EOF
 		INSERT INTO Players (Firstname,Lastname,Gender,Class,Active) VALUES ("$FIRSTNAME","$LASTNAME","$GENDER","$CLASS",$ACTIVE)
 EOF
 	cat <<EOF
