@@ -5,20 +5,20 @@
 #
 #	create the database & the database user
 #
-mysql --host=$DBHOST --user=root <<EOF
-CREATE DATABASE IF NOT EXISTS $DBNAME CHARACTER SET utf8 COLLATE utf8_general_ci;
+mysql --host=$DB_HOSTNAME --user=root <<EOF
+CREATE DATABASE IF NOT EXISTS $DB_DATABASE CHARACTER SET utf8 COLLATE utf8_general_ci;
 USE mysql;
-DELETE FROM user WHERE User="$DBUSER";
+DELETE FROM user WHERE User="$DB_USERNAME";
 FLUSH PRIVILEGES;
-GRANT ALL PRIVILEGES ON *.* TO "$DBUSER"@"$DBHOST" IDENTIFIED BY "$DBPASS" WITH GRANT OPTION;
-GRANT ALL PRIVILEGES ON *.* TO "$DBUSER"@"%" IDENTIFIED BY "$DBPASS" WITH GRANT OPTION;
+GRANT ALL PRIVILEGES ON *.* TO "$DB_USERNAME"@"$DB_HOSTNAME" IDENTIFIED BY "$DB_PASSWORD" WITH GRANT OPTION;
+GRANT ALL PRIVILEGES ON *.* TO "$DB_USERNAME"@"%" IDENTIFIED BY "$DB_PASSWORD" WITH GRANT OPTION;
 EXIT
 EOF
 
 #
 #	create the tables
 #
-mysql --host=$DBHOST --user=$DBUSER --password=$DBPASS --database=$DBNAME <<EOF
+mysql --host=$DB_HOSTNAME --user=$DB_USERNAME --password=$DB_PASSWORD --database=$DB_DATABASE <<EOF
 CREATE TABLE IF NOT EXISTS Settings (
 	Name varchar(100) NOT NULL default "",
 	Value varchar(1000) NOT NULL default "",
@@ -105,7 +105,7 @@ EOF
 for SQL in init/*.sql; do
 	if [ -f $SQL ]; then
 		echo "Processing initial sql script: $SQL"
-		mysql --host=$DBHOST --user=$DBUSER --password=$DBPASS --database=$DBNAME <$SQL
+		mysql --host=$DB_HOSTNAME --user=$DB_USERNAME --password=$DB_PASSWORD --database=$DB_DATABASE <$SQL
 	fi
 done
 

@@ -5,7 +5,7 @@
 #
 #	create the database & the database user
 #
-mysql --host=$DBHOST --user=root <<EOF
-DROP DATABASE $DBNAME;
+mysql --host=$DB_HOSTNAME --user=root <<EOF
+DROP DATABASE $DB_DATABASE;
 EXIT
 EOF
