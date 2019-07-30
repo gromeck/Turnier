@@ -1,6 +1,6 @@
 #!/bin/bash
 
-DBHOST="localhost"
-DBNAME="Badminton"
-DBUSER="Badminton"
-DBPASS="Badminton"
+[ "$DBHOST" = "" ] && DBHOST="localhost"
+[ "$DBNAME" = "" ] && DBNAME="Badminton"
+[ "$DBUSER" = "" ] && DBUSER="Badminton"
+[ "$DBPASS" = "" ] && DBPASS="Badminton"
