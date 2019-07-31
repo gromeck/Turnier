@@ -122,7 +122,7 @@ function html_footer()
 </div>
 <?php if (defined('__SHOW_EXECUTIONTIME__') && __SHOW_EXECUTIONTIME__) { ?>
 	<div class="executiontime" id="executiontime">
-	Execution Time: <?php print $_execution_time ?>ms
+	Execution Time: <?php print $_execution_time ?>ms @ <?php print $_ENV['HOSTNAME'] ?>
 	</div>
 <?php } ?>
 </body>
