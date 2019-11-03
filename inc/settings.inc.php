@@ -12,12 +12,24 @@
 */
 
 /*
-**	database access
+**	database default credentials
 */
-define('DB_HOSTNAME','localhost');
-define('DB_DATABASE','Badminton');
-define('DB_USERNAME','Badminton');
-define('DB_PASSWORD','Badminton');
+$credentials = array(
+	'DB_HOSTNAME' => 'localhost',
+	'DB_DATABASE' => 'Badminton',
+	'DB_USERNAME' => 'Badminton',
+	'DB_PASSWORD' => 'Badminton',
+);
+
+/*
+**	override credentials with the environment
+*/
+foreach ($credentials as $key => $val) {
+	if ($envval = getenv($key))
+		$val = $envval;
+	define($key,$val);
+}
+		
 include_once 'util.inc.php';
 include_once 'database.inc.php';
 

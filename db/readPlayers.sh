@@ -6,6 +6,8 @@ DBNAME="Badminton"
 DBUSER="Badminton"
 DBPASS="Badminton"
 
+. ./credentials.sh
+
 PLAYERFILE="$1"
 
 if [ ! -f "$PLAYERFILE" ]; then
@@ -32,7 +34,7 @@ for PLAYER in $PLAYERS; do
 
 	#echo "inserting [$ROW]: $FIRSTNAME,$LASTNAME,$CLASS,$ACTIVE"
 
-	mysql --host=localhost --user=$DBUSER --password=$DBPASS --database=$DBNAME <<EOF
+	$MYSQL <<EOF
 		INSERT INTO Players (Firstname,Lastname,Gender,Class,Active) VALUES ("$FIRSTNAME","$LASTNAME","$GENDER","$CLASS",$ACTIVE)
 EOF
 	cat <<EOF

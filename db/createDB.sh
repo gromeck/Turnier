@@ -1,26 +1,24 @@
 #!/bin/bash
 
-DBNAME="Badminton"
-DBUSER="Badminton"
-DBPASS="Badminton"
+. ./credentials.sh
 
 #
 #	create the database & the database user
 #
-mysql --host=localhost --user=root <<EOF
-CREATE DATABASE IF NOT EXISTS $DBNAME CHARACTER SET utf8 COLLATE utf8_general_ci;
+mysql --protocol=tcp --host=$DB_HOSTNAME --port=$DB_HOSTPORT --user=root <<EOF
+CREATE DATABASE IF NOT EXISTS $DB_DATABASE CHARACTER SET utf8 COLLATE utf8_general_ci;
 USE mysql;
-DELETE FROM user WHERE User="$DBUSER";
+DELETE FROM user WHERE User="$DB_USERNAME";
 FLUSH PRIVILEGES;
-GRANT ALL PRIVILEGES ON *.* TO "$DBUSER"@"localhost" IDENTIFIED BY "$DBPASS" WITH GRANT OPTION;
-GRANT ALL PRIVILEGES ON *.* TO "$DBUSER"@"%" IDENTIFIED BY "$DBPASS" WITH GRANT OPTION;
+GRANT ALL PRIVILEGES ON *.* TO "$DB_USERNAME"@"$DB_HOSTNAME" IDENTIFIED BY "$DB_PASSWORD" WITH GRANT OPTION;
+GRANT ALL PRIVILEGES ON *.* TO "$DB_USERNAME"@"%" IDENTIFIED BY "$DB_PASSWORD" WITH GRANT OPTION;
 EXIT
 EOF
 
 #
 #	create the tables
 #
-mysql --host=localhost --user=$DBUSER --password=$DBPASS --database=$DBNAME <<EOF
+$MYSQL <<EOF
 CREATE TABLE IF NOT EXISTS Settings (
 	Name varchar(100) NOT NULL default "",
 	Value varchar(1000) NOT NULL default "",
@@ -107,7 +105,7 @@ EOF
 for SQL in init/*.sql; do
 	if [ -f $SQL ]; then
 		echo "Processing initial sql script: $SQL"
-		mysql --host=localhost --user=$DBUSER --password=$DBPASS --database=$DBNAME <$SQL
+		$MYSQL <$SQL
 	fi
 done
 
