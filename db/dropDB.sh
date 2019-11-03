@@ -3,9 +3,6 @@
 . ./credentials.sh
 
 #
-#	create the database & the database user
+#	drop the database
 #
-mysql --protocol=tcp --host=$DB_HOSTNAME --port=$DB_HOSTPORT --user=root <<EOF
-DROP DATABASE $DB_DATABASE;
-EXIT
-EOF
+echo "DROP DATABASE $DB_DATABASE" | $MYSQL
