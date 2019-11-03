@@ -14,13 +14,12 @@ if [ ! -f "$PLAYERFILE" ]; then
 	echo "Can't read from file $PLAYERFILE -- aborting!"
 	exit 1
 fi
-PLAYERS=$( cat $PLAYERFILE )
 
 #
 #	create the tables
 #
 ROW=0
-for PLAYER in $PLAYERS; do
+cat $PLAYERFILE | while read PLAYER; do
 	ROW=$(( $ROW + 1 ))
 	FIRSTNAME="$( echo $PLAYER | cut -f1 -d, )"
 	LASTNAME="$( echo $PLAYER | cut -f2 -d, )"
