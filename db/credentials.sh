@@ -6,4 +6,5 @@
 [ "$DB_USERNAME" = "" ] && DB_USERNAME="Badminton"
 [ "$DB_PASSWORD" = "" ] && DB_PASSWORD="Badminton"
 
-MYSQL=$( mysql --protocol=tcp --host=$DB_HOSTNAME --port=$DB_HOSTPORT --user=$DB_USERNAME --password=$DB_PASSWORD --database=$DB_DATABASE)
+MYSQL="mysql --protocol=tcp --host=$DB_HOSTNAME --port=$DB_HOSTPORT --user=$DB_USERNAME --password=$DB_PASSWORD --database=$DB_DATABASE"
+MYSQLROOT="sudo mysql"
