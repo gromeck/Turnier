@@ -5,7 +5,7 @@
 #
 #	create the database & the database user
 #
-mysql --protocol=tcp --host=$DB_HOSTNAME --port=$DB_HOSTPORT --user=root <<EOF
+$MYSQLROOT <<EOF
 CREATE DATABASE IF NOT EXISTS $DB_DATABASE CHARACTER SET utf8 COLLATE utf8_general_ci;
 USE mysql;
 DELETE FROM user WHERE User="$DB_USERNAME";
@@ -102,11 +102,8 @@ EOF
 #
 #	process initial sql script
 #
-for SQL in init/*.sql; do
-	if [ -f $SQL ]; then
-		echo "Processing initial sql script: $SQL"
-		$MYSQL <$SQL
-	fi
+for INITSQL in init/*.sql; do
+	./reinitTable.sh $INITSQL
 done
 
 #
