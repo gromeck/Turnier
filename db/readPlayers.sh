@@ -1,27 +1,18 @@
 #!/bin/bash
-
+#
+#	read the players from a file
+#
 DBNAME="Badminton"
 DBUSER="Badminton"
 DBPASS="Badminton"
 
-PLAYERS="
-Luke,Skywalker,M,2
-Han,Solo,M,2
-Leia,Organa,F,2
-Jar-Jar,Binks,M,2
-Darth,Vader,M,2
-Obi-Wan,Kenobi,M,2
-Qui-Gon,Jinn,M,2
-Lando,Calrissian,M,2
-Count,Dooku,M,2
-Beru,Lars,F,2
-"
+PLAYERFILE="$1"
 
-
-# read in the players from file
-# Lastname,Firstname,Sex,Class
-#PLAYERS="$( cat players.csv )"
-PLAYERS="$( cat players-utf8.csv )"
+if [ ! -f "$PLAYERFILE" ]; then
+	echo "Can't read from file $PLAYERFILE -- aborting!"
+	exit 1
+fi
+PLAYERS=$( cat $PLAYERFILE )
 
 #
 #	create the tables
