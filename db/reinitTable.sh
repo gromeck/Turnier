@@ -18,6 +18,7 @@ fi
 #	get the tablename from the parameters
 #
 INITSQL=$( basename "$1" .sql )
+TABLE=$( echo "$INITSQL" | cut -f2 -d- )
 
 #
 #	check the name of the init file
