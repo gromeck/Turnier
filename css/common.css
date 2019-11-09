@@ -1,8 +1,68 @@
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Roboto-Light'), url(../fonts/Roboto-Light.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  src: local('Roboto-Regular'), url(../fonts/Roboto-Regular.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Roboto-Bold'), url(../fonts/Roboto-Bold.ttf) format('truetype');
+}
+
+
+@font-face {
+  font-family: 'RobotoCondensed';
+  font-style: normal;
+  font-weight: 300;
+  src: local('RobotoCondensed-Light'), url(../fonts/RobotoCondensed-Light.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'RobotoCondensed';
+  font-style: normal;
+  font-weight: 500;
+  src: local('RobotoCondensed-Regular'), url(../fonts/RobotoCondensed-Regular.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  src: local('RobotoCondensed-Bold'), url(../fonts/RobotoCondensed-Bold.ttf) format('truetype');
+}
+
+
+@font-face {
+  font-family: 'RobotoMono';
+  font-style: normal;
+  font-weight: 300;
+  src: local('RobotoMono-Light'), url(../fonts/RobotoMono-Light.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'RobotoMono';
+  font-style: normal;
+  font-weight: 500;
+  src: local('RobotoMono-Regular'), url(../fonts/RobotoMono-Regular.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'RobotoMono';
+  font-style: normal;
+  font-weight: 700;
+  src: local('RobotoMono-Bold'), url(../fonts/RobotoMono-Bold.ttf) format('truetype');
+}
+
+
 * {
 	padding:0;
 	border:0;
 	margin:0;
-	font-family:sans-serif,helvetica,Arial;
+	font-family:Roboto,sans-serif,helvetica,Arial;
 }
 body {
 	background-color:#ffffff;
@@ -206,11 +266,11 @@ td {
 }
 .player_male {
 	font-weight:bold;
-	color:#1f06aa;
+	color:#21648f;
 }
 .player_female {
 	font-weight:bold;
-	color:#d00000;
+	color:#e23828;
 }
 .player_active {
 	font-weight:normal;
@@ -233,8 +293,8 @@ td {
 	top:0;
 	left:0;
 	right:0;
-	background-color:#000000;
-	//box-shadow:0px 8px #000000;
+	background: rgba(0,0,0,0.03);
+	font-size:2rem;
 }
 
 .logo {
@@ -252,22 +312,21 @@ td {
 	left:200px;
 	padding-top:20px;
 	font-size:175%;
+	vertical-align:middle;
+	cursor:pointer;
+	//text-shadow: 0 0 10px #f0f0f0;
 	//border:1px solid red;
 	//font-weight:bold;
-	font-family:impact;
-	color:#404040;
-	vertical-align:middle;
-	text-shadow: 0 0 10px #f0f0f0;
-	cursor:pointer;
+	//color:#404040;
 
-background: #f6e6b4; /* Old browsers */
-background: -moz-linear-gradient(top,  #f6e6b4 0%, #ed9017 100%); /* FF3.6+ */
-background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f6e6b4), color-stop(100%,#ed9017)); /* Chrome,Safari4+ */
-background: -webkit-linear-gradient(top,  #f6e6b4 0%,#ed9017 100%); /* Chrome10+,Safari5.1+ */
-background: -o-linear-gradient(top,  #f6e6b4 0%,#ed9017 100%); /* Opera 11.10+ */
-background: -ms-linear-gradient(top,  #f6e6b4 0%,#ed9017 100%); /* IE10+ */
-background: linear-gradient(to bottom,  #f6e6b4 0%,#ed9017 100%); /* W3C */
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f6e6b4', endColorstr='#ed9017',GradientType=0 ); /* IE6-9 */
+//background: #f6e6b4; /* Old browsers */
+//background: -moz-linear-gradient(top,  #f6e6b4 0%, #ed9017 100%); /* FF3.6+ */
+//background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f6e6b4), color-stop(100%,#ed9017)); /* Chrome,Safari4+ */
+//background: -webkit-linear-gradient(top,  #f6e6b4 0%,#ed9017 100%); /* Chrome10+,Safari5.1+ */
+//background: -o-linear-gradient(top,  #f6e6b4 0%,#ed9017 100%); /* Opera 11.10+ */
+//background: -ms-linear-gradient(top,  #f6e6b4 0%,#ed9017 100%); /* IE10+ */
+//background: linear-gradient(to bottom,  #f6e6b4 0%,#ed9017 100%); /* W3C */
+//filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f6e6b4', endColorstr='#ed9017',GradientType=0 ); /* IE6-9 */
 }
 
 .round {
@@ -378,7 +437,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f6e6b4', end
 	color:#a0a0a0;
 	font-weight:bold;
 	font-size:8em;
-	font-family:courier,monospace;
+	font-family:RobotoMono,courier,monospace;
 	line-height:0.9em;
 }
 

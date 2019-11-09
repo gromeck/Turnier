@@ -10,6 +10,7 @@
 	box-shadow: rgba(0,0,0,0.2) 0.1em 0.1em 0.1em, inset rgba(255,255,255,0.7) 0 0 0.5em;
 	color:#808080;
 	font-weight:bold;
+	font-size:2rem;
 	cursor:pointer;
 	display:inline-block;
 }
