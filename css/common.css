@@ -64,10 +64,12 @@
 	margin:0;
 	font-family:Roboto,sans-serif,helvetica,Arial;
 }
+html {
+	font-size:300%;
+}
 body {
 	background-color:#ffffff;
 	color:#000000;
-	font-size:150%;
 }
 
 a:link { color:black; text-decoration:none; }
@@ -81,12 +83,12 @@ ul, ol {
 }
 
 table {
-	font-size:1em;
+	font-size:0.75rem;
 }
 td {
-	padding:0.1em;
-	padding-left:0.1em;
-	padding-right:0.1em;
+	padding:0.1rem;
+	padding-left:0.1rem;
+	padding-right:0.1rem;
 }
 
 .tr-head, .td-head, .tr-foot, .td-foot {
@@ -111,13 +113,13 @@ td {
 
 .table-round {
 	border:1px solid black;
-	font-size:1.5em;
+	//font-size:1.5rem;
 }
 
 .table-round td {
-	padding:0.2em;
-	padding-left:0.4em;
-	padding-right:0.4em;
+	padding:0.2rem;
+	padding-left:0.4rem;
+	padding-right:0.4rem;
 }
 
 .table-round-col-round {
@@ -150,7 +152,7 @@ td {
 	text-align:center;
 }
 .table-player-admin {
-	font-size:1.0em;
+	//font-size:2.0rem;
 }
 .table-player-admin td {
 	nowrap;
@@ -158,29 +160,29 @@ td {
 .table-round-admin {
 }
 .table-round-admin td {
-	padding:0.5em;
+	padding:0.5rem;
 	text-align:center;
 }
 .table-player-board {
-	font-size:1.5em;
+	//font-size:1.5rem;
 }
 .table-player-board td {
-	padding:0.2em;
-	padding-left:0.5em;
-	padding-right:0.5em;
+	padding:0.2rem;
+	padding-left:0.5rem;
+	padding-right:0.5rem;
 }
 
 .table-player-statistics {
 }
 .table-player-statistics td {
-	padding:0.1em;
-	padding-left:0.3em;
-	padding-right:0.3em;
+	padding:0.1rem;
+	padding-left:0.3rem;
+	padding-right:0.3rem;
 }
 
 .table-pause {
 	border:0px solid black;
-	font-size:1.5em;
+	//font-size:1.5rem;
 }
 
 .table-stats {
@@ -197,15 +199,19 @@ td {
 }
 
 .separator {
-	padding:0.2em;
+	padding:0.2rem;
 	border:0;
 	margin:0;
 }
 
 .separator_wide {
-	padding:1.0em;
+	padding:1.0rem;
 }
 
+
+.admin-panel, .admin-panel input, .admin-panel select, .admin-panel button {
+	font-size:0.5rem;
+}
 
 .adminfooter {
 	position:absolute;
@@ -214,7 +220,7 @@ td {
 	bottom:0;
 
 	text-align:center;
-	padding:0.25em;
+	padding:0.25rem;
 	border:0;
 	background:#c0c0c0;
 }
@@ -244,18 +250,19 @@ td {
 }
 
 .bigtext {
+	font-size:1.5rem;
 	font-weight:bold;
 //	color:#303030;
 }
 
 .biggertext {
-	font-size:2em;
+	font-size:2rem;
 	font-weight:bold;
 //	color:#303030;
 }
 
 .biggesttext {
-	font-size:4em;
+	font-size:4rem;
 	font-weight:bold;
 //	color:#303030;
 }
@@ -293,8 +300,7 @@ td {
 	top:0;
 	left:0;
 	right:0;
-	background: rgba(0,0,0,0.03);
-	font-size:2rem;
+	background: #f8f8f8;
 }
 
 .logo {
@@ -305,13 +311,13 @@ td {
 
 .banner {
 	position:absolute;
-	bottom:0px;
-	top:0px;
+	bottom:0;
+	top:0;
 	right:200px;
-	text-align:center;
 	left:200px;
-	padding-top:20px;
-	font-size:175%;
+	text-align:center;
+	padding-top:0.5rem;
+	font-size:2rem;
 	vertical-align:middle;
 	cursor:pointer;
 	//text-shadow: 0 0 10px #f0f0f0;
@@ -338,9 +344,9 @@ td {
 	color:#f0f0f0;
 	text-align:center;
 	font-weight:bold;
-	font-size:6em;
+	font-size:4rem;
+	line-height:4rem;
 	cursor:pointer;
-	line-height:1.1em;
 }
 .round_started {
 	background:#c00000;
@@ -355,12 +361,12 @@ td {
 .executiontime {
 	top:0;
 	left:0;
-	height:1em;
+	height:1rem;
 	background-color:#ffffff;
 	color:#000000;
 	opacity:0.5;
 	z-index:5;
-	font-size:0.5em;
+	font-size:0.5rem;
 }
 
 .dbupdate {
@@ -387,25 +393,24 @@ td {
 	width:100%;
 	height:100%-160px;
 	text-align:center;
-	font-size:1em;
 }
 
 .pagetitle {
 	top:0;
-	height:2rem;
+	height:1rem;
 	left:0;
 	right:0;
 	text-align:center;
 	color:#a0a0a0;
 	font-weight:bold;
-	font-size:1.0em;
-	line-height:1.5em;
-	margin-bottom:1em;
+	font-size:0.5rem;
+	line-height:1.0rem;
+	margin-bottom:1rem;
 	background-color:#f0f0f0;
 }
 .pagetitleleft {
 	position:absolute;
-	left:1em;
+	left:1rem;
 	width:33%;
 	text-align:left;
 }
@@ -419,7 +424,7 @@ td {
 .pagetitleright {
 	position:absolute;
 	width:33%;
-	right:1em;
+	right:1rem;
 	text-align:right;
 	color:#808080;
 }
@@ -436,9 +441,9 @@ td {
 	text-align:center;
 	color:#a0a0a0;
 	font-weight:bold;
-	font-size:8em;
 	font-family:RobotoMono,courier,monospace;
-	line-height:0.9em;
+	font-size:4rem;
+	line-height:4rem;
 }
 
 .audio {
@@ -457,24 +462,22 @@ td {
 	border:2px solid #808080;
 	width:80%;
 	padding:20px;
-	font-size:2em;
 	text-align:left;
-	line-height:1.5em;
+	line-height:1.5rem;
 }
 .intro ul {
-	padding-left:1em;
+	padding-left:1rem;
 }
 
 .intro-title {
-	font-size:2em;
 	font-weight:bold;
-	padding-left:3em;
-	padding-right:3em;
+	padding-left:1rem;
+	padding-right:1rem;
 }
 
 .fadeoutbox {
 	background: #ffffff;
-	font-size:1.5em;
+	font-size:1.5rem;
 }
 
 .fadeout {
