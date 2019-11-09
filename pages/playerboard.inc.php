@@ -55,7 +55,7 @@ function print_list($class,$players)
 	$rows = ceil($nplayers / $cols);
 
 	html_separator();
-	html_print_big('Klasse: '.lookup_class($class).' ('.$nplayers.')');
+	print('Klasse: '.lookup_class($class).' ('.$nplayers.')');
 	html_separator();
 	?>
 	<center>

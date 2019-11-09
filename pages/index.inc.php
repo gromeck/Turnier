@@ -19,7 +19,7 @@
 html_separator();
 foreach ($pages as $pageid => $page) {
 	if ($page['title'] && $page['show'] && !$page['admin']) {
-		html_button_href($page['title'],'?page='.$pageid,'10em',$page['accessKey']);
+		html_button_href($page['title'],'?page='.$pageid,'8em',$page['accessKey']);
 		if ($page['separator'])
 			html_separator();
 	}

@@ -103,14 +103,14 @@ function print_round($nround,$round)
 				<tr class="tr-head">
 					<td class="td-head" align=center><?php html_print_big('Platz','bigtextwhite'); ?></td>
 					<td class="td-head" colspan=3><center><?php
-						print html_print_big('Klasse: '.lookup_class($class),'bigtextwhite');
+						print print('Klasse: '.lookup_class($class));
 					?></center></td>
 				</tr>
 			<?php for ($court = 0;$court < $round[$class]['ncourts'];$court++,$abscourt++) { ?>
 				<tr class="tr-<?php print ($court % 2) ? 'odd' : 'even' ?>">
-					<td class="table-round-col-court"><?php html_print_big($abscourt); ?></td>
+					<td class="table-round-col-court"><?php print($abscourt); ?></td>
 					<td class="table-round-col-left"><?php print_pair($round[$class][$court][0],1); ?></td>
-					<td class="table-round-col-vs"><span class=bigtext>:</span></td>
+					<td class="table-round-col-vs">:</td>
 					<td class="table-round-col-right"><?php print_pair($round[$class][$court][1],1); ?></td>
 				</tr><?php
 			}
@@ -129,13 +129,13 @@ function print_round($nround,$round)
 	<table class="table-pause" cellspacing=0 cellpadding=0>
 		<tr class="">
 			<td class="" align=center><?php
-	html_print_big('Pause: ');
+	print('Pause: ');
 	for ($class = 1;$class <= 2;$class++) {
 		for ($pauser = 0;$pauser < $round[$class]['npausers'];$pauser++) {
 			if (!$comma)
 				$comma = 1;
 			else
-				html_print_big(', ');
+				print(', ');
 			print_player($round[$class]['pausers'][$pauser]);
 		}
 	}

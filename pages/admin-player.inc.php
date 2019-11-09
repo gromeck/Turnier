@@ -178,37 +178,39 @@ function clickedRFIDunlink(pid)
 	document.location = '?page=admin-rfidlink&action=unlink&pid=' + pid;	
 }
 </script>
-	<div style="float:left;">
-		<?php
-			html_print_big('Filter:');
-		?>
-		<input name="filter" id="filter" class="deletable" autocomplete=off size=40>
-	</div>
-	<div style="float:right;">
-		<?php
-			html_print_big('Alle ausgewählten Spieler ...');
-			?>
-			<select name="action" id="action" size="1">
-				<option data-confirm=0 data-frameurl="" value=""></option>
-				<option data-confirm=0 data-frameurl="" value="activate">aktivieren</option>
-				<option data-confirm=0 data-frameurl="" value="deactivate">deaktivieren</option>
-				<option data-confirm=1 data-frameurl="" value="ban">sperren</option>
-				<option data-confirm=1 data-frameurl="" value="unban">entsprerren</option>
-				<option data-confirm=1 data-frameurl="" value="delete">löschen</option>
-			</select>
+	<div class=admin-panel>
+		<div style="float:left;">
 			<?php
-			html_button('action','Los!','clickedActionMarked();');
-		?>
-	</div>
-	<div style="float:fill;">
+				print('Filter:');
+			?>
+			<input name="filter" id="filter" class="deletable" autocomplete=off size=40>
+		</div>
+		<div style="float:right;">
+			<?php
+				print('Alle ausgewählten Spieler ...');
+				?>
+				<select name="action" id="action" size="1">
+					<option data-confirm=0 data-frameurl="" value=""></option>
+					<option data-confirm=0 data-frameurl="" value="activate">aktivieren</option>
+					<option data-confirm=0 data-frameurl="" value="deactivate">deaktivieren</option>
+					<option data-confirm=1 data-frameurl="" value="ban">sperren</option>
+					<option data-confirm=1 data-frameurl="" value="unban">entsprerren</option>
+					<option data-confirm=1 data-frameurl="" value="delete">löschen</option>
+				</select>
+				<?php
+				html_button('action','Los!','clickedActionMarked();',-1,'button_tiny');
+			?>
+		</div>
+		<div style="float:fill;">
+			<?php
+				html_button('addplayer','Neuer Spieler','clickedAddPlayer();',-1,'button_tiny');
+			?>
+		</div>
 		<?php
-			html_button('addplayer','Neuer Spieler','clickedAddPlayer();');
+		html_separator();
+
 		?>
 	</div>
-	<?php
-	html_separator();
-
-	?>
 	<center>
 	<table class="table-player-admin" border=1 cellspacing=0 cellpadding=5 width=100%>
 		<tr class="tr-head">
