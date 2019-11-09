@@ -39,7 +39,6 @@ include_once 'database.inc.php';
 $settings = array(
 	array( 'Name' => 'TITLE',              'Title' => 'Titel',                            'Value' => '15. Goddelauer Badminton Nachtturnier', 'Units' => '' ),
 	array( 'Name' => 'YEAR',               'Title' => 'Jahr',                             'Value' => 2014, 'Units' => '' ),
-	array( 'Name' => 'LOGO',               'Title' => 'Logo',                             'Value' => '',   'Units' => '' ),
 	array( 'Name' => 'COURTS_MAX',         'Title' => 'Max. Plätze gesamt',               'Value' => 9,    'Units' => '' ),
 	array( 'Name' => 'COURTS_CLASS1_MIN',  'Title' => 'Min. Plätze Klasse '.lookup_class(1),    'Value' => 2,    'Units' => '' ),
 	array( 'Name' => 'COURTS_CLASS2_MIN',  'Title' => 'Min. Plätze Klasse '.lookup_class(2),    'Value' => 7,    'Units' => '' ),
