@@ -84,11 +84,16 @@ function getKeyCode(event)
 </head>
 <body onkeydown="getKeyCode(event)" onload="initPage()">
 <div class="header">
-	<a href="?page=index" accessKey="e"><img class="logo" src="images/shuttlecock.png" border=0></a>
+	<a href="?page=index" accessKey="e"><img class="logo" src="images/Logo/Logo.svg" border=0></a>
 	<span class="banner" onclick="document.location='?page=index';"><?php
+		if ($title) {
 			html_print_big(TITLE);
 			print "<br>";
 			html_print_big($title,'biggertext');
+		}
+		else {
+			html_print_big(TITLE,'biggertext');
+		}
 		?></span>
 	<span class="round round_<?php print (@$_round['Round'] > 0) ? $_round['State'] : '' ?>" onclick="document.location='?page=playround'";>
 		<?php print (@$_round['Round'] > 0) ? $_round['Round'] : '' ?>
