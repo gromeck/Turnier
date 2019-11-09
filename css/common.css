@@ -391,17 +391,17 @@ td {
 }
 
 .pagetitle {
-	background-color:#f0f0f0;
 	top:0;
-	height:20px;
+	height:2rem;
 	left:0;
 	right:0;
 	text-align:center;
 	color:#a0a0a0;
 	font-weight:bold;
-	font-size:0.6em;
+	font-size:1.0em;
 	line-height:1.5em;
 	margin-bottom:1em;
+	background-color:#f0f0f0;
 }
 .pagetitleleft {
 	position:absolute;
