@@ -89,10 +89,10 @@ function getKeyCode(event)
 		if ($title) {
 			html_print_big(TITLE);
 			print "<br>";
-			html_print_big($title,'biggertext');
+			html_print_bigger($title);
 		}
 		else {
-			html_print_big(TITLE,'biggertext');
+			html_print_bigger(TITLE);
 		}
 		?></span>
 	<span class="round round_<?php print (@$_round['Round'] > 0) ? $_round['State'] : '' ?>" onclick="document.location='?page=playround'";>

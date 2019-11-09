@@ -55,7 +55,7 @@ function print_player($player,$no_grey_out = 0,$pid_highlight = 0)
 function print_pair($pair,$no_grey_out = 0,$pid_highlight = 0)
 {
 	print_player($pair[0],$no_grey_out,$pid_highlight);
-	html_print_big(' + ');
+	print(' + ');
 	print_player($pair[1],$no_grey_out,$pid_highlight);
 }
 
