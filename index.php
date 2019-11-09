@@ -35,7 +35,7 @@ $pages = array(
 	'playerstatistics' =>	array( 'title' => 'Spieler-Statistik',			'show' => 1, 'admin' => 0, 'separator' => 0, 'accessKey' => '' ),
 	'roundstatistics' =>	array( 'title' => 'Runden-Statistik',			'show' => 1, 'admin' => 0, 'separator' => 1, 'accessKey' => '' ),
 	'playerboard' =>   		array( 'title' => 'Spielerliste',				'show' => 1, 'admin' => 0, 'separator' => 1, 'accessKey' => 'b' ),
-	'playround' =>	   		array( 'title' => 'Spielrunde',					'show' => 1, 'admin' => 0, 'separator' => 0, 'accessKey' => 'a' ),
+	'playround' =>	   		array( 'title' => 'Spielrunde',					'show' => 1, 'admin' => 1, 'separator' => 0, 'accessKey' => 'a' ),
 	'admin-intro' =>		array( 'title' => 'Intro',						'show' => 1, 'admin' => 1, 'separator' => 0, 'accessKey' => 'c' ),
 	'admin-settings' =>	   	array( 'title' => 'Einstellungen',				'show' => 1, 'admin' => 1, 'separator' => 0, 'accessKey' => '' ),
 	'admin-player' =>   	array( 'title' => 'Spieler-Administration',		'show' => 1, 'admin' => 1, 'separator' => 0, 'accessKey' => '' ),
