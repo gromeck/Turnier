@@ -65,7 +65,7 @@
 	font-family:Roboto,sans-serif,helvetica,Arial;
 }
 html {
-	font-size:300%;
+	font-size:220%;
 }
 body {
 	background-color:#ffffff;
@@ -154,7 +154,9 @@ td {
 .table-player-admin {
 	//font-size:2.0rem;
 }
-.table-player-admin td {
+
+
+.table-player-admin td, .table-rfid-admin td {
 	nowrap;
 }
 .table-round-admin {
@@ -196,6 +198,11 @@ td {
 .table-stats-col-number {
 	width:80px;
 	text-align:center;
+}
+
+.table-rfid-admin {
+	font-weight:bold;
+	font-size:2rem;
 }
 
 .separator {

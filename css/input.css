@@ -25,8 +25,8 @@ span.deleteicon span {
 	display: block;
 	top:0;
 	right: 1rem;
-	width: 32px;
-	height: 32px;
+	width: 1rem;
+	height: 1rem;
 	background: url('/images/dialog-close-2.png');
 	cursor: pointer;
 }
