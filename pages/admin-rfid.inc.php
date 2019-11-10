@@ -31,7 +31,10 @@ if ($_POST) {
 		$msg = 'RFID-Code '.$_POST['code'].' ist unbekannt.';
 		$color = 'red';
 	}
-	$player = db_player_lookup_by_rfidcode($_POST['code']);
+	if ($player = db_player_lookup_by_rfidcode($_POST['code'])) {
+		if (!$player['Active'])
+			$color = 'orange';
+	}
 }
 
 ?>
@@ -75,12 +78,30 @@ html_separator(1);
 </form>
 <?php
 html_separator(1);
-html_print_bigger($msg);
-html_separator(1);
 if (@$player) {
-	html_separator(1);
-	html_print_bigger('Spieler ist:<br>'.$player['Firstname'].' '.$player['Lastname']);
+	?>
+	<table class=table-rfid-admin>
+		<tr>
+			<td>RFID-Code:</td>
+			<td><?php print($player['RFIDcode']); ?></td>
+		</tr>
+		<tr>
+			<td>Nick:</td>
+			<td><?php print_player($player); ?></td>
+		</tr>
+		<tr>
+			<td>Name:</td>
+			<td><?php print $player['Firstname'].' '.$player['Lastname']; ?></td>
+		</tr>
+		<tr>
+			<td>Spiele:</td>
+			<td><?php print $player['Matches']; ?></td>
+		</tr>
+	</table>
+	<?php
 }
+else
+	html_print_bigger($msg);
 ?>
 </center>
 <script>
