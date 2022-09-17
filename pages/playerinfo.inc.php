@@ -53,6 +53,14 @@ function print_playerinfo($player)
 			<td><?php html_print_big(lookup_class($player['Class'])); ?></td>
 		</tr>
 		<tr class=<?php print ($n ++% 2) ? 'tr-odd' : 'tr-even' ?>>
+			<td><?php html_print_big('Aktiv:'); ?></td>
+			<td><?php html_print_big(lookup_active($player['Active'])); ?></td>
+		</tr>
+		<tr class=<?php print ($n ++% 2) ? 'tr-odd' : 'tr-even' ?>>
+			<td><?php html_print_big('Banned:'); ?></td>
+			<td><?php html_print_big(lookup_banned($player['Banned'])); ?></td>
+		</tr>
+		<tr class=<?php print ($n ++% 2) ? 'tr-odd' : 'tr-even' ?>>
 			<td><?php html_print_big('Spiele:'); ?></td>
 			<td><?php html_print_big($player['Matches']); ?></td>
 		</tr>

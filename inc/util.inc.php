@@ -106,6 +106,20 @@ function lookup_class($players_class)
 	return "???";
 }
 
+function lookup_active($players_active)
+{
+	if ($players_active)
+		return "aktiv";
+	return "passiv";
+}
+
+function lookup_banned($players_banned)
+{
+	if ($players_banned)
+		return "banned";
+	return "unbanned";
+}
+
 function lookup_round_state($round_state)
 {
 	switch ($round_state) {
