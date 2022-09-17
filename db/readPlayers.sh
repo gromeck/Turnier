@@ -16,10 +16,20 @@ if [ ! -f "$PLAYERFILE" ]; then
 fi
 
 #
+#	drop all players
+#
+$MYSQL <<EOF
+	TRUNCATE TABLE Players;
+EOF
+
+
+#
 #	create the tables
 #
 ROW=0
 cat $PLAYERFILE | while read PLAYER; do
+	[ "$PLAYER" = "" ] && continue
+	[ "$PLAYER" = "CSV" ] && continue
 	ROW=$(( $ROW + 1 ))
 	FIRSTNAME="$( echo $PLAYER | cut -f1 -d, )"
 	LASTNAME="$( echo $PLAYER | cut -f2 -d, )"
@@ -40,6 +50,11 @@ EOF
 		INSERT INTO Players (Firstname,Lastname,Gender,Class,Active) VALUES ("$FIRSTNAME","$LASTNAME","$GENDER","$CLASS",$ACTIVE)
 EOF
 done
+
+echo -n "Players inserted: "
+$MYSQL <<EOF
+	SELECT COUNT(*) FROM Players;
+EOF
 
 #
 #	generate the nicknames
