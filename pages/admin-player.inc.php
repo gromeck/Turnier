@@ -79,14 +79,19 @@ $players = db_player_list(DB_PLAYER_ALL,DB_PLAYER_ALL,DB_PLAYER_ALL);
 **	count the number of linked players
 */
 $players_linked = 0;
-for ($n = 0;$n < count($players);$n++)
-	if ($players[$n]['RFIDcode'])
-		$players_linked++;
+$players_unbanned = 0;
+for ($n = 0;$n < count($players);$n++) {
+	if (!$players[$n]['Banned']) {
+		$players_unbanned++;
+		if ($players[$n]['RFIDcode'])
+			$players_linked++;
+	}
+}
 
 /*
 **	set the page headline
 */
-$_page_headline = 'Gekoppelt: '.$players_linked.'/'.count($players);
+$_page_headline = 'Ungesperrte Spieler: '.$players_unbanned.', davon gekoppelt: '.$players_linked;
 
 ?>
 <script language="JavaScript">
