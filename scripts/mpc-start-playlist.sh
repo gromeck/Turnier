@@ -24,7 +24,7 @@ while read LINE ; do
 		sleep ${LINE:5}
 	else
 		echo "Sending: $LINE"
-		mpc --no-status --host $MPBOX $LINE
+		mpc --quiet --host=$MPBOX $LINE
 	fi
 done <<EOM
 volume $VOLMUSIC
