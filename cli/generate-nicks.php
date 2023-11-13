@@ -7,7 +7,6 @@ define('CLI',1);
 include_once "../inc/settings.inc.php";
 include_once "../inc/common.inc.php";
 include_once "../inc/database.inc.php";
-include_once "../3rdparty/tcpdf/tcpdf.php";
 
 /*
 **	(re-)generate the nicknames in the database
