@@ -5,10 +5,10 @@
 	padding-left:1rem;
 	padding-right:1rem;
 	margin:0.2rem;
-	//-moz-border-radius:0.2rem;
-	//border-radius:0.25rem;
-	//box-shadow: rgba(0,0,0,0.2) 0.1rem 0.1rem 0.1rem, inset rgba(255,255,255,0.7) 0 0 0.5rem;
-	color:#808080;
+	-moz-border-radius:0.2rem;
+	border-radius:0.25rem;
+	box-shadow: rgba(0,0,0,0.2) 0.1rem 0.1rem 0.1rem, inset rgba(255,255,255,0.7) 0 0 0.5rem;
+	color:#404040;
 	font-weight:bold;
 	font-size:0.9rem;
 	cursor:pointer;
@@ -50,17 +50,19 @@
 	padding-left:1rem;
 	padding-right:1rem;
 	margin:0.2rem;
-	//-moz-border-radius:0.2rem;
-	//border-radius:0.25rem;
-	//box-shadow: rgba(0,0,0,0.2) 0.1rem 0.1rem 0.1rem, inset rgba(255,255,255,0.7) 0 0 0.5rem;
-	color:#808080;
+	-moz-border-radius:0.2rem;
+	border-radius:0.25rem;
+	box-shadow: rgba(0,0,0,0.2) 0.1rem 0.1rem 0.1rem, inset rgba(255,255,255,0.7) 0 0 0.5rem;
+	color:#404040;
 	font-weight:bold;
 	font-size:0.9rem;
 	cursor:pointer;
 	display:inline-block;
 
-	//-moz-border-radius:0.1rem;
-	//border-radius:0.1rem;
+/*
+	-moz-border-radius:0.1rem;
+	border-radius:0.1rem;
+*/
 	font-size:0.5rem;
 }
 
