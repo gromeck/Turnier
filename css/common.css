@@ -259,19 +259,19 @@ td {
 .bigtext {
 	font-size:1.5rem;
 	font-weight:bold;
-//	color:#303030;
+/*	color:#303030;*/
 }
 
 .biggertext {
 	font-size:2rem;
 	font-weight:bold;
-//	color:#303030;
+/*	color:#303030;*/
 }
 
 .biggesttext {
 	font-size:4rem;
 	font-weight:bold;
-//	color:#303030;
+/*	color:#303030; */
 }
 
 .bigtextwhite {
@@ -324,7 +324,7 @@ td {
 	left:200px;
 	text-align:center;
 	padding-top:0.5rem;
-	font-size:2rem;
+	font-size:1.5rem;
 	vertical-align:middle;
 	cursor:pointer;
 	//text-shadow: 0 0 10px #f0f0f0;
@@ -332,14 +332,16 @@ td {
 	//font-weight:bold;
 	//color:#404040;
 
-//background: #f6e6b4; /* Old browsers */
-//background: -moz-linear-gradient(top,  #f6e6b4 0%, #ed9017 100%); /* FF3.6+ */
-//background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f6e6b4), color-stop(100%,#ed9017)); /* Chrome,Safari4+ */
-//background: -webkit-linear-gradient(top,  #f6e6b4 0%,#ed9017 100%); /* Chrome10+,Safari5.1+ */
-//background: -o-linear-gradient(top,  #f6e6b4 0%,#ed9017 100%); /* Opera 11.10+ */
-//background: -ms-linear-gradient(top,  #f6e6b4 0%,#ed9017 100%); /* IE10+ */
-//background: linear-gradient(to bottom,  #f6e6b4 0%,#ed9017 100%); /* W3C */
-//filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f6e6b4', endColorstr='#ed9017',GradientType=0 ); /* IE6-9 */
+/*
+background: #f6e6b4; /* Old browsers * /
+background: -moz-linear-gradient(top,  #f6e6b4 0%, #ed9017 100%); /* FF3.6+ * /
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f6e6b4), color-stop(100%,#ed9017)); /* Chrome,Safari4+ * /
+background: -webkit-linear-gradient(top,  #f6e6b4 0%,#ed9017 100%); /* Chrome10+,Safari5.1+ * /
+background: -o-linear-gradient(top,  #f6e6b4 0%,#ed9017 100%); /* Opera 11.10+ * /
+background: -ms-linear-gradient(top,  #f6e6b4 0%,#ed9017 100%); /* IE10+ * /
+background: linear-gradient(to bottom,  #f6e6b4 0%,#ed9017 100%); /* W3C * /
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f6e6b4', endColorstr='#ed9017',GradientType=0 ); /* IE6-9 * /
+*/
 }
 
 .round {
