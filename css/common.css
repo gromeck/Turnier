@@ -237,8 +237,6 @@ td {
 	margin-top:8px;
 	margin-bottom:8px;
 	padding:8px;
-	-moz-border-radius: 8px;
-	-webkit-border-radius: 8px;
 	border-radius: 8px;
 	background:#f0f0f0;
 	box-shadow:1px 1px 2px #a0a0a0;
@@ -327,21 +325,6 @@ td {
 	font-size:1.5rem;
 	vertical-align:middle;
 	cursor:pointer;
-	//text-shadow: 0 0 10px #f0f0f0;
-	//border:1px solid red;
-	//font-weight:bold;
-	//color:#404040;
-
-/*
-background: #f6e6b4; /* Old browsers * /
-background: -moz-linear-gradient(top,  #f6e6b4 0%, #ed9017 100%); /* FF3.6+ * /
-background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f6e6b4), color-stop(100%,#ed9017)); /* Chrome,Safari4+ * /
-background: -webkit-linear-gradient(top,  #f6e6b4 0%,#ed9017 100%); /* Chrome10+,Safari5.1+ * /
-background: -o-linear-gradient(top,  #f6e6b4 0%,#ed9017 100%); /* Opera 11.10+ * /
-background: -ms-linear-gradient(top,  #f6e6b4 0%,#ed9017 100%); /* IE10+ * /
-background: linear-gradient(to bottom,  #f6e6b4 0%,#ed9017 100%); /* W3C * /
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f6e6b4', endColorstr='#ed9017',GradientType=0 ); /* IE6-9 * /
-*/
 }
 
 .round {
@@ -461,10 +444,6 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f6e6b4', end
 	left:0;
 	height:30px;
 	width:100px;
-	//right:0px;
-	//height:10px;
-	//border:1px solid green;
-	//background:#f0f0f0;
 }
 
 .intro {
