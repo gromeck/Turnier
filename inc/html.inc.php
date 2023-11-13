@@ -40,6 +40,7 @@ function html_header($page,$title = '',$headline = '')
 	global $_SESSION;
 	global $_round;
 	?>
+<!DOCTYPE html>
 <html>
 <head>
 <meta http-equiv="pragma" content="no-cache">
@@ -247,12 +248,12 @@ function input_set(id,value)
 
 function html_button_href($title,$url,$width = 0,$accessKey = 0)
 {
-	if (is_numeric($width))
+	if ($width > 0 && is_numeric($width))
 		$width .= 'px';
 	?>
 	<a href="<?php print $url ?>"
 		class=button
-		<?php print ($width != 0) ? 'style="width:'.$width.';"' : '' ?>
+		<?php print ($width > 0) ? 'style="width:'.$width.';"' : '' ?>
 		<?php print ($accessKey) ? ' accessKey="'.$accessKey.'"' : ''; ?>
 		><?php print $title ?></a>
 	<?php
