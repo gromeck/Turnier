@@ -135,16 +135,16 @@ function keybind_exec()
 	<?php
 		html_separator();
 		if ($subpage > 0) {
-			html_button(1,'&lt;&lt;&lt;','keybind_prev()',-1,'button','b');
+			html_button(1,'&lt;&lt;&lt;','keybind_prev()',-1,'button',HTML_BUTTON_GREEN);
 		}
 
 		print '<span class="intro-title">'.$intro[$subpage]['title'].'</span>';
 
 		if ($subpage < count($intro) - 1) {
-			html_button(1,'&gt;&gt;&gt;','keybind_next()',-1,'button','d');
+			html_button(1,'&gt;&gt;&gt;','keybind_next()',-1,'button',HTML_BUTTON_BLUE);
 		}
 		else
-			html_button_href('weiter zur Spielerliste','?page=playerboard',0,'a');
+			html_button_href('weiter zur Spielerliste','?page=playerboard',0,HTML_BUTTON_RED);
 
 		html_separator();
 		print '<div class=intro>'.$intro[$subpage]['content'].'</div>';

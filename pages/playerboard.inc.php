@@ -80,7 +80,7 @@ if (ADMIN) {
 	/*
 	**	as admin offer a button to jump to the round
 	*/
-	html_button_href('weiter zur Spielrunde','?page=playround',0,'a');
+	html_button_href('weiter zur Spielrunde','?page=playround',0,HTML_BUTTON_RED);
 }
 
 foreach (array( DB_PLAYER_ONLYCLASS1, DB_PLAYER_ONLYCLASS2) as $class) {

@@ -183,7 +183,7 @@ if ($rounds = db_round_list(DB_ROUND_ONLYPLAYING)) {
 	if (ADMIN) {
 		if ($timeleft < 0)
 			html_print_big('Zeit ist abgelaufen!');
-		html_button_href('Spielrunde '.$nround.' abbrechen/stoppen','?page=playround&round=stop&nround='.$nround,0,'d');
+		html_button_href('Spielrunde '.$nround.' abbrechen/stoppen','?page=playround&round=stop&nround='.$nround,0,HTML_BUTTON_BLUE);
 		html_separator();
 	}
 	print_round($nround,$round);
@@ -196,8 +196,8 @@ else if ($rounds = db_round_list(DB_ROUND_ONLYSTARTED)) {
 	$round = db_round_restore($nround);
 	//dump_array("rounds",$rounds);
 	if (ADMIN) {
-		html_button_href('Spielrunde '.$nround.' jetzt spielen','?page=playround&round=play&nround='.$nround,0,'a');
-		html_button_href('Spielrunde '.$nround.' löschen','?page=playround&round=clear&nround='.$nround,0,'d');
+		html_button_href('Spielrunde '.$nround.' jetzt spielen','?page=playround&round=play&nround='.$nround,0,HTML_BUTTON_RED);
+		html_button_href('Spielrunde '.$nround.' löschen','?page=playround&round=clear&nround='.$nround,0,HTML_BUTTON_BLUE);
 	}
 	html_separator(1);
 	print_round($nround,$round);
@@ -210,7 +210,7 @@ else {
 	html_print_big('Keine laufende Spielrunde vorhanden.');
 	if (ADMIN) {
 		html_separator();
-		html_button_href('Neue Spielrunde starten','?page=playround&round=start',0,'a');
+		html_button_href('Neue Spielrunde starten','?page=playround&round=start',0,HTML_BUTTON_RED);
 	}
 	html_separator(1);
 	html_print_big('Letzte Check-Ins/-Outs:');
