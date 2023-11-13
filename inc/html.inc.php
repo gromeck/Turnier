@@ -4,6 +4,13 @@
 **
 */
 
+define('HTML_BUTTON_BASE',ord('j'));
+define('HTML_BUTTON_RED',chr(HTML_BUTTON_BASE + 0));
+define('HTML_BUTTON_GREEN',chr(HTML_BUTTON_BASE + 1));
+define('HTML_BUTTON_YELLOW',chr(HTML_BUTTON_BASE + 2));
+define('HTML_BUTTON_BLUE',chr(HTML_BUTTON_BASE + 3));
+define('HTML_BUTTON_WHITE',chr(HTML_BUTTON_BASE + 4));
+
 function html_print_big($text,$class = 'bigtext')
 {
 	if (strlen($text))
@@ -40,7 +47,6 @@ function html_header($page,$title = '',$headline = '')
 	global $_SESSION;
 	global $_round;
 	?>
-<!DOCTYPE html>
 <html>
 <head>
 <meta http-equiv="pragma" content="no-cache">
@@ -248,7 +254,7 @@ function input_set(id,value)
 
 function html_button_href($title,$url,$width = 0,$accessKey = 0)
 {
-	if ($width > 0 && is_numeric($width))
+	if (is_numeric($width) && $width > 0)
 		$width .= 'px';
 	?>
 	<a href="<?php print $url ?>"
